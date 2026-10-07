@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@300;400;500;600;700&display=swap');
+@import 'leaflet/dist/leaflet.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-dm-serif: 'DM Serif Display', Georgia, serif;
+  --font-manrope: 'Manrope', sans-serif;
+}
+
+body {
+  background-color: #F5F1E8;
+  color: #252824;
+  font-family: var(--font-manrope), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Editorial Paper Surface Effect */
+.editorial-paper {
+  background-color: #FBF9F3;
+  border: 1px solid #E2D9C8;
+}
+
+.editorial-card {
+  background-color: #F5F1E8;
+  border: 1px solid #E8E0D0;
+  transition: all 0.2s ease-in-out;
+}
+
+.editorial-card:hover {
+  border-color: #537C70;
+}
+
+/* Custom Scrollbar for Scientific Panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F1E8;
+}
+::-webkit-scrollbar-thumb {
+  background: #D5CBBA;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #537C70;
+}
+
+/* Subdued Cartographic Leaflet Tile Map Styles */
+.leaflet-container {
+  background: #E5E0D5 !important;
+  font-family: var(--font-manrope), sans-serif;
+}
+
+.leaflet-tile {
+  filter: sepia(20%) hue-rotate(180deg) contrast(95%) brightness(98%);
+}
+
+.leaflet-popup-content-wrapper {
+  background-color: #FBF9F3;
+  color: #252824;
+  border: 1px solid #537C70;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(37, 40, 36, 0.1);
+}
+
+.leaflet-popup-tip {
+  background: #FBF9F3;
+}
